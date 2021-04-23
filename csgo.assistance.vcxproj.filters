@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="other\console\console.cpp">
+      <Filter>other\console</Filter>
+    </ClCompile>
+    <ClCompile Include="other\utilities\utilities.cpp">
+      <Filter>other\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\interfaces\interfaces.cpp">
+      <Filter>source_engine\interfaces</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="other">
+      <UniqueIdentifier>{d1aaade6-bed4-4a01-a737-46309b8af2c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\console">
+      <UniqueIdentifier>{1fea76a4-a0f7-4241-8e73-2c33a6484b79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\utilities">
+      <UniqueIdentifier>{bdc1bd94-12dd-438b-bf51-fe705a69ffe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source_engine">
+      <UniqueIdentifier>{15ad6996-9004-4a11-a32b-99acc1e314a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source_engine\interfaces">
+      <UniqueIdentifier>{8cc11248-4ba8-4abc-b30c-560d6114641b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source_engine\interfaces\list">
+      <UniqueIdentifier>{be2d1f7f-0a7d-418e-bbf1-076bd18539ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="other\console\console.h">
+      <Filter>other\console</Filter>
+    </ClInclude>
+    <ClInclude Include="common_includes.h" />
+    <ClInclude Include="other\utilities\utilities.h">
+      <Filter>other\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\interfaces.h">
+      <Filter>source_engine\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IVEngineClient.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
