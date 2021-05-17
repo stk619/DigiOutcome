@@ -150,15 +150,51 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="main\menu\menu.cpp" />
     <ClCompile Include="other\console\console.cpp" />
+    <ClCompile Include="other\input\input.cpp" />
+    <ClCompile Include="other\netvars\netvars.cpp" />
+    <ClCompile Include="other\renderer\renderer.cpp" />
+    <ClCompile Include="source_engine\hooks\functions\cam_think.cpp" />
+    <ClCompile Include="source_engine\hooks\functions\cam_to_thirdperson.cpp" />
+    <ClCompile Include="source_engine\hooks\functions\create_move.cpp" />
+    <ClCompile Include="source_engine\hooks\functions\lock_cursor.cpp" />
+    <ClCompile Include="source_engine\hooks\functions\paint.cpp" />
+    <ClCompile Include="source_engine\hooks\functions\viewmodel_fov.cpp" />
+    <ClCompile Include="source_engine\hooks\hooks.cpp" />
     <ClCompile Include="source_engine\interfaces\interfaces.cpp" />
-    <ClCompile Include="other\utilities\utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_includes.h" />
+    <ClInclude Include="main\configuration.h" />
+    <ClInclude Include="main\menu\menu.h" />
     <ClInclude Include="other\console\console.h" />
+    <ClInclude Include="other\encryption\hashing.h" />
+    <ClInclude Include="other\encryption\xor.h" />
+    <ClInclude Include="other\input\input.h" />
+    <ClInclude Include="other\math\vector2d.h" />
+    <ClInclude Include="other\math\vector3d.h" />
+    <ClInclude Include="other\netvars\netvars.h" />
+    <ClInclude Include="other\renderer\renderer.h" />
+    <ClInclude Include="other\utilities\detours.h" />
+    <ClInclude Include="source_engine\definitions\clientmode_input.h" />
+    <ClInclude Include="source_engine\definitions\general_defines.h" />
+    <ClInclude Include="source_engine\definitions\received_props.h" />
+    <ClInclude Include="source_engine\definitions\usercmd.h" />
+    <ClInclude Include="source_engine\entities\base_animating.h" />
+    <ClInclude Include="source_engine\entities\base_combat_character.h" />
+    <ClInclude Include="source_engine\entities\base_csplayer.h" />
+    <ClInclude Include="source_engine\entities\base_entity.h" />
+    <ClInclude Include="source_engine\entities\base_player.h" />
+    <ClInclude Include="source_engine\entities\base_weapon.h" />
+    <ClInclude Include="source_engine\hooks\hooks.h" />
     <ClInclude Include="source_engine\interfaces\interfaces.h" />
     <ClInclude Include="other\utilities\utilities.h" />
+    <ClInclude Include="source_engine\interfaces\list\IBaseClientDll.h" />
+    <ClInclude Include="source_engine\interfaces\list\IClientEntityList.h" />
+    <ClInclude Include="source_engine\interfaces\list\IGlobalVarsBase.h" />
+    <ClInclude Include="source_engine\interfaces\list\IInterfaceSystem.h" />
+    <ClInclude Include="source_engine\interfaces\list\ISurface.h" />
     <ClInclude Include="source_engine\interfaces\list\IVEngineClient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

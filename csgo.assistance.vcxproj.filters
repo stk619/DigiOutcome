@@ -5,11 +5,41 @@
     <ClCompile Include="other\console\console.cpp">
       <Filter>other\console</Filter>
     </ClCompile>
-    <ClCompile Include="other\utilities\utilities.cpp">
-      <Filter>other\utilities</Filter>
-    </ClCompile>
     <ClCompile Include="source_engine\interfaces\interfaces.cpp">
       <Filter>source_engine\interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\hooks.cpp">
+      <Filter>source_engine\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\create_move.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\viewmodel_fov.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\paint.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="other\renderer\renderer.cpp">
+      <Filter>other\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\cam_think.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\cam_to_thirdperson.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\lock_cursor.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="main\menu\menu.cpp">
+      <Filter>main\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="other\input\input.cpp">
+      <Filter>other\input</Filter>
+    </ClCompile>
+    <ClCompile Include="other\netvars\netvars.cpp">
+      <Filter>other\netvars</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +61,39 @@
     <Filter Include="source_engine\interfaces\list">
       <UniqueIdentifier>{be2d1f7f-0a7d-418e-bbf1-076bd18539ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source_engine\hooks">
+      <UniqueIdentifier>{6deac7f4-7096-490e-9efe-5189694d6919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source_engine\hooks\functions">
+      <UniqueIdentifier>{17221393-2cd7-47c5-b582-1810f539b1da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source_engine\defintions">
+      <UniqueIdentifier>{4ca8dc2f-d220-4c77-81ba-d41d43d973d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\encryption">
+      <UniqueIdentifier>{18fa0878-4df1-4ada-926b-c9173e7bee7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\renderer">
+      <UniqueIdentifier>{c80a433a-af95-4778-8bbc-8703be2f487e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\math">
+      <UniqueIdentifier>{eb3c79f4-96cf-4f50-9c7e-4c82fa8f47ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{b6bc8da3-4739-4428-92e4-b17171b2b9db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\menu">
+      <UniqueIdentifier>{9999e9cd-d676-46d6-81d6-f6082c2eab55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\input">
+      <UniqueIdentifier>{8743148d-92fe-4c2f-a5c5-e38e2978fecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\netvars">
+      <UniqueIdentifier>{202a49d7-8f5f-4dd7-b3da-7884f03d0416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source_engine\entities">
+      <UniqueIdentifier>{3e6bb642-1da5-46e6-85c2-92b42ac457e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="other\console\console.h">
@@ -45,6 +108,84 @@
     </ClInclude>
     <ClInclude Include="source_engine\interfaces\list\IVEngineClient.h">
       <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\hooks\hooks.h">
+      <Filter>source_engine\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\usercmd.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="other\utilities\detours.h">
+      <Filter>other\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\general_defines.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="other\encryption\hashing.h">
+      <Filter>other\encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="other\encryption\xor.h">
+      <Filter>other\encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\ISurface.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="other\renderer\renderer.h">
+      <Filter>other\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="other\math\vector2d.h">
+      <Filter>other\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\clientmode_input.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="other\math\vector3d.h">
+      <Filter>other\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IInterfaceSystem.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="main\configuration.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\menu\menu.h">
+      <Filter>main\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="other\input\input.h">
+      <Filter>other\input</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IGlobalVarsBase.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="other\netvars\netvars.h">
+      <Filter>other\netvars</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\received_props.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IBaseClientDll.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IClientEntityList.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\entities\base_player.h">
+      <Filter>source_engine\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\entities\base_entity.h">
+      <Filter>source_engine\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\entities\base_combat_character.h">
+      <Filter>source_engine\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\entities\base_weapon.h">
+      <Filter>source_engine\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\entities\base_animating.h">
+      <Filter>source_engine\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\entities\base_csplayer.h">
+      <Filter>source_engine\entities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
