@@ -19,6 +19,8 @@
 #include <array>
 //used in: sleeping, timing
 #include <chrono>
+//used in: event logger
+#include <deque>
 //used in: console stream allocation
 #include <iostream>
 //used in: signature scanning
@@ -39,36 +41,34 @@
 #include "other/encryption/hashing.h"
 #include "other/encryption/xor.h"
 //used in: general math functions
+#include "other/math/math.h"
 #include "other/math/vector2d.h"
 #include "other/math/vector3d.h"
-//used in: global configuration of menu
-#include "main/configuration.h"
+#include "other/math/matrix3x4.h"
+//used in: general source engine definitions
+#include "source_engine/definitions/general_defines.h"
 
 //general global includes
 //used in: proper dll detachment
 extern HMODULE hGlobalModule;
-//used in: hooking wndproc
-extern HWND hGlobalWindow;
 
 //global defines
 //just wanted a shorter version of __FILE__ - https://stackoverflow.com/questions/8487986/file-macro-shows-full-path
 //debug feature, only ever used in debug logs
-#define __FILENAME__ (strrchr(__FILE__, '\\') ? strrchr(__FILE__, '\\') + 1 : __FILE__)
+#ifdef _DEBUG
+	#define __FILENAME__ (strrchr(__FILE__, '\\') ? strrchr(__FILE__, '\\') + 1 : __FILE__)
+#endif //_DEBUG
+
+#define TICKS_TO_TIME(iTick) (iTick * nInterfaces::ptrGlobalVars->flIntervalPerTick)
 
 //TODO: - fixes/changes
-//fonts break on resolution change, hook https://www.unknowncheats.me/forum/counterstrike-global-offensive/338901-alternative-checking.html
-//handle detours and utilities files properly
-//when the menu is opened, allow movement keys to still be pressed, should be easy as we hook wndproc
+//clean up weapondata.h
+//menu font system needs changing as it doesn't account for font cache clearing on screen size change - currently just reloads menu which reloads cfg, change this when doing esp
 
 //TODO: - additions
-//a menu, in the form of oop
-//vfunc hooking to the detours
-//json config system
 
 //FUTURE - planning
-//could change the renderer to directx which will allow for easy porting across games if i choose to do so
 //a cheat loader, more secure than simple dll injections, which will enable the creation of a website too
-//changing interfaces, potentially walk through the list
 
 //Things to learn
 //calling conventions https://en.m.wikipedia.org/wiki/X86_calling_conventions https://en.wikipedia.org/wiki/Hooking
@@ -87,4 +87,4 @@ extern HWND hGlobalWindow;
 //-> https://github.com/frk1/hazedumper/blob/master/csgo.cs
 
 //other
-//-> https://github.com/perilouswithadollarsign/cstrike15_src leaked csgo source (from may 2017)s
+//-> https://github.com/perilouswithadollarsign/cstrike15_src leaked csgo source (from may 2017)

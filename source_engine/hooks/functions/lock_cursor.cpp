@@ -1,17 +1,15 @@
 #include "../hooks.h"
+//used in: menu state
+#include "../../../main/menu/menu.h"
 
+//cursor input handler
 void __fastcall nHooks::lock_cursor(ISurface* ecx, void* edx)
 {
-	static void(__fastcall * oLockCursor)(ISurface * ecx, void* edx) = sDetours.get_original<decltype(&nHooks::lock_cursor)>("LockCursor");
+	static void(__fastcall * oLockCursor)(ISurface * ecx, void* edx) = sDetours.get_original<decltype(&nHooks::lock_cursor)>(xorstr_("LockCursor"));
 
-	if (!nConfiguration::sMenu.bOpened)
-	{
-		nInterfaces::ptrInputSystem->enable_input(true);
+	if (!nMenu::ptrMainWindow->GetState())
 		return oLockCursor(ecx, edx);
-	}
 
-	//lock game input
-	nInterfaces::ptrInputSystem->enable_input(false);
-	//keep mouse input available though
+	//keep the cursor unlocked, unless menu is opened
 	ecx->unlock_cursor();
 }

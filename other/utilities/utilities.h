@@ -3,6 +3,8 @@
 //used in: interface logging
 #include "../console/console.h"
 
+#pragma warning(disable : 6387)
+
 namespace nUtilities
 {
 	//get interfaces, this is a simple method that isn't really too complicated, just gets return address of the 
@@ -17,7 +19,7 @@ namespace nUtilities
 		//this is supposedly bad as this is most likely a vac detected module that i'm outright walking into, but the
 		//module itself probably just lowers trust factor, more mentioned above.
 		using ptrInterfaceFunction = void* (*)(const char*, std::size_t*);
-		//decleared as _NotNull_ as this prevents warning C6738 from being generated, which *should* never be a problem anyway
+		//decleared as _NotNull_ as this prevents warning C6387 from being generated, which *should* never be a problem anyway
 		const ptrInterfaceFunction _Notnull_ ptrReturnValue = reinterpret_cast<ptrInterfaceFunction>(GetProcAddress(GetModuleHandleA(szModule.data()), xorstr_("CreateInterface")));
 
 		if (ptrReturnValue != nullptr)
@@ -49,7 +51,6 @@ namespace nUtilities
 		return (*reinterpret_cast<T**>(ptrBase))[iIndex];
 	}
 
-	//simple signature scanner NOTE: maybe change this out somehow?
 	inline std::uint8_t* find_signature(std::string_view szModule, std::string_view szSignature)
 	{
 		//converts the letters and numbers into a byte array
@@ -113,5 +114,17 @@ namespace nUtilities
 				return &szImageBytes[i];
 		}
 		return nullptr;
+	}
+
+	inline void custom_clantag(const char* szClantag)
+	{
+		static void(__fastcall* custom_clantag)(const char*, const char*) = reinterpret_cast<void(__fastcall*)(const char*, const char*)>(nUtilities::find_signature(xorstr_("engine.dll"), xorstr_("53 56 57 8B DA 8B F9 FF 15")));
+		custom_clantag(szClantag, szClantag);
+	}
+
+	inline void custom_skybox(const char* szSkybox)
+	{
+		static void(__fastcall * custom_skybox)(const char*) = reinterpret_cast<void(__fastcall*)(const char*)>(nUtilities::find_signature(xorstr_("engine.dll"), xorstr_("55 8B EC 81 EC ? ? ? ? 56 57 8B F9 C7 45")));
+		custom_skybox(szSkybox);
 	}
 }

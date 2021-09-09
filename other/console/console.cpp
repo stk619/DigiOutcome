@@ -21,7 +21,7 @@ bool console_t::attach(std::string_view szTitle)
 	return true;
 }
 
-void console_t::detach()
+void console_t::free()
 {
 	//close opened input/output streams
 	fclose(stdin);
@@ -34,7 +34,6 @@ void console_t::detach()
 
 //i dislike pasting but this was the only "viable" solution i found online to being able to format the logs
 //as well as being able to change text colour.
-//https://github.com/binkynz/cstrike-hack/blob/master/other/console/console.cpp#L30
 //for formatting examples - https://en.wikipedia.org/wiki/Printf_format_string
 void console_t::log(eLogType iLogType, std::string_view szFormatting, ...)
 {

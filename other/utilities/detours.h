@@ -50,7 +50,7 @@ public:
 		//*could* look into it, but it doesn't matter in the long run
 		uint8_t* ucFreeHookFunction = nUtilities::find_signature(xorstr_("gameoverlayrenderer.dll"), xorstr_("55 8B ?? 64 ?? ?? ?? ?? ?? 6A ?? 68 ?? ?? ?? ?? 50 64 ?? ?? ?? ?? ?? ?? 81 ?? ?? ?? ?? ?? 56 8B ?? ?? 85"));
 
-		//NOTE: uisng an address manager for the signature scanner should be able to eliminate this/cut it down to a more readable
+		//uisng an address manager for the signature scanner should be able to eliminate this/cut it down to a more readable
 		//piece of code, this is good enough for now though.
 		typedef void(__cdecl* free_hook_function_fn)(void*, bool);
 		free_hook_function_fn run_free_hook_function = (free_hook_function_fn)ucFreeHookFunction;

@@ -15,7 +15,13 @@ bool nHooks::allocate()
 	if (!sDetours.hook_function(xorstr_("CreateMove"), nUtilities::find_signature(xorstr_("client.dll"), xorstr_("55 8B EC 8B 0D ? ? ? ? 85 C9 75 06")), &create_move))
 		return false;
 
-	if (!sDetours.hook_function(xorstr_("ViewmodelFov"), nUtilities::find_signature(xorstr_("client.dll"), xorstr_("55 8B EC 8B 0D ? ? ? ? 83 EC 08 57")), &viewmodel_fov))
+	if (!sDetours.hook_function(xorstr_("OverrideView"), nUtilities::find_signature(xorstr_("client.dll"), xorstr_("55 8B EC 83 E4 F8 83 EC 58 56 57 8B 3D")), &override_view))
+		return false;
+
+	if (!sDetours.hook_function(xorstr_("GetViewmodelFov"), nUtilities::find_signature(xorstr_("client.dll"), xorstr_("55 8B EC 8B 0D ? ? ? ? 83 EC 08 57")), &get_viewmodel_fov))
+		return false;
+
+	if (!sDetours.hook_function(xorstr_("GlowEffectSpectator"), nUtilities::find_signature(xorstr_("client.dll"), xorstr_("55 8B EC 83 EC 14 53 8B 5D 0C 56 57 85 DB 74")), &glow_effect_spectator))
 		return false;
 
 	//vguimatsurface.dll
@@ -24,6 +30,14 @@ bool nHooks::allocate()
 
 	//engine.dll
 	if (!sDetours.hook_function(xorstr_("Paint"), nUtilities::find_signature(xorstr_("engine.dll"), xorstr_("55 8B EC 83 EC 40 53 8B D9 8B 0D ? ? ? ? 89 5D F8")), &paint))
+		return false;
+
+	//studiorender.dll
+	if (!sDetours.hook_function(xorstr_("DrawModel"), nUtilities::find_signature(xorstr_("studiorender.dll"), xorstr_("55 8B EC 83 E4 F8 83 EC 54")), &draw_model))
+		return false;
+
+	//vfunc hooks
+	if (!sDetours.hook_function(xorstr_("OnScreenSizeChanged"), nUtilities::vfunc<void(__fastcall*)(void*, void*, int, int)>(nInterfaces::ptrSurface, 116), &on_screen_size_changed))
 		return false;
 
 	sConsole.log(eLogType::MAIN, xorstr_("hooks finished allocating"));

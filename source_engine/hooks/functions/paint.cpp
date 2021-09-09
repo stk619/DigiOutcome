@@ -1,8 +1,10 @@
 #include "../hooks.h"
+//used in: rendering menu
+#include "../../../main/menu/menu.h"
+//used in: feature call locations
+#include "../../../main/features/features.h"
 //used in: menu input
 #include "../../../other/input/input.h"
-//used in: rendering menu
-#include "../../main/menu/menu.h"
 
 //a perk of this hook method seems to be that when we're in game in the buy menu the text and boxes don't get
 //messed up when buying things or going through the buy menu. whereas in the paint traverse hook you'd use to 
@@ -18,19 +20,20 @@ void __fastcall nHooks::paint(void* ecx, void* edx, int iPaintMode)
 		//need to draw our functions within the boundaries of the game
 		nInterfaces::ptrSurface->begin_drawing();
 		{
-			//30px down because i use nvidias stupid fps counter in the top left, test code anyways
-			if (sInput.toggle_key(VK_INSERT, nConfiguration::sMenu.bOpened))
-				nRender::text(10, 30, xorstr_("csgo.assistant"), colour_t(255, 255, 255, 255), nRender::uiTahoma);
+			nVisuals::tick();
 
-			if (sInput.mouse_in_boundaries(20, 20, 100, 100))
-			{
-				nRender::outlined_rectangle(20, 20, 100, 100, colour_t(255, 255, 255, 255));
-				nRender::text(10, 50, xorstr_("mouse is in boundaries"), colour_t(255, 255, 255, 255), nRender::uiTahoma);
-			}
-			//run our esp code
-			//nVisuals::allocate();
-			//run our menu code
-			//nMenu::allocate();
+			//render event related info
+			nMiscellaneous::hitmarker_paint();
+			nMiscellaneous::event_logger_paint();
+
+			//render the container each frame
+			nMenu::ptrMainWindow->Render();
+
+			//stupid method of enabling input and disabling input
+			if (!nInterfaces::ptrEngine->is_in_game() || !nInterfaces::ptrEngine->is_connected())
+				nInterfaces::ptrInputSystem->enable_input(nMenu::ptrMainWindow->GetState() ? false : true);
+			else
+				nInterfaces::ptrInputSystem->enable_input(true);
 		}
 		nInterfaces::ptrSurface->end_drawing();
 	}

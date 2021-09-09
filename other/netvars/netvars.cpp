@@ -4,12 +4,10 @@
 //used in: obtaining client classes
 #include "../../source_engine/interfaces/interfaces.h"
 
-//https://www.unknowncheats.me/forum/counterstrike-global-offensive/209624-fast-easy-netvar-manager.html
-//modified form of this, heavily "inspired" by this though:
-//https://github.com/binkynz/cstrike-hack/blob/a937351488f0cd1a8b848347c32ee42bc8b3e844/valve/netvars/netvars.cpp#L33
+//modified form of this: https://www.unknowncheats.me/forum/counterstrike-global-offensive/209624-fast-easy-netvar-manager.html
 //could also dump this to a file, but this is for a project, so i'm not so sure about file management yet
 //it's also crucial that the specific types are selected for the netvars are used as they simply don't work otherwise
-//even something simple as a int vs bytes
+//even something simple as a int vs short (ItemDefintionIndex) >:|
 
 bool nNetvarManager::allocate()
 {
@@ -41,7 +39,7 @@ void nNetvarManager::dump_vars(std::string_view szNetvarName, receivedtable_t* p
 		//tables, this check dropped the mapped vars from 40k, down to 1.7k saving almost a second on inject time
 		if ((ptrPropChild != nullptr) && (ptrPropChild->iProps > 0) && (ptrProp->ptrDataTable->szNetTableName[0] == 'D'))
 		{
-			//reiterate through the vars, this is recursive
+			//reiterate through the vars, as netvar managers are obviously meant to be recursive functions
 			nNetvarManager::dump_vars(szNetvarName, ptrPropChild, ptrProp->iOffset + uiOffset);
 		}
 
@@ -53,7 +51,7 @@ void nNetvarManager::dump_vars(std::string_view szNetvarName, receivedtable_t* p
 		nNetvarManager::umOffsets[uiHashedNetvar] = ptrProp->iOffset + uiOffset;
 
 		//printing out the values here causes the netvar manager to make the cheat load 1.2s slower
-		sConsole.log(eLogType::LOG, xorstr_("netvar found! var: %s->%s, offset: 0x%x"), szNetvarName.data(), ptrProp->szVariablename, ptrProp->iOffset);
+		//sConsole.log(eLogType::LOG, xorstr_("netvar found! var: %s->%s, offset: 0x%x"), szNetvarName.data(), ptrProp->szVariablename, ptrProp->iOffset);
 
 		//looking for a specific var
 		//if (ptrProp->iOffset == 0x25f)

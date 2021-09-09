@@ -14,9 +14,6 @@
     <ClCompile Include="source_engine\hooks\functions\create_move.cpp">
       <Filter>source_engine\hooks\functions</Filter>
     </ClCompile>
-    <ClCompile Include="source_engine\hooks\functions\viewmodel_fov.cpp">
-      <Filter>source_engine\hooks\functions</Filter>
-    </ClCompile>
     <ClCompile Include="source_engine\hooks\functions\paint.cpp">
       <Filter>source_engine\hooks\functions</Filter>
     </ClCompile>
@@ -32,14 +29,80 @@
     <ClCompile Include="source_engine\hooks\functions\lock_cursor.cpp">
       <Filter>source_engine\hooks\functions</Filter>
     </ClCompile>
+    <ClCompile Include="other\netvars\netvars.cpp">
+      <Filter>other\netvars</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\on_screen_size_changed.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\override_view.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\button.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\checkbox.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\colorpicker.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\combobox.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\container.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\itemselector.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\keybinder.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\label.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\listbox.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\multibox.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\slider.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\tabpanel.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\textbox.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="main\FGUI\widgets\widgets.cpp">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClCompile>
     <ClCompile Include="main\menu\menu.cpp">
       <Filter>main\menu</Filter>
     </ClCompile>
-    <ClCompile Include="other\input\input.cpp">
-      <Filter>other\input</Filter>
+    <ClCompile Include="main\features\miscellaneous\miscellaneous.cpp">
+      <Filter>main\features\miscellaneous</Filter>
     </ClCompile>
-    <ClCompile Include="other\netvars\netvars.cpp">
-      <Filter>other\netvars</Filter>
+    <ClCompile Include="main\features\playerlist\playerlist.cpp">
+      <Filter>main\features\playerlist</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\get_viewmodel_fov.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="other\events\event_manager.cpp">
+      <Filter>other\events</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\visuals\visuals.cpp">
+      <Filter>main\features\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\glow_effect_spectator.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="source_engine\hooks\functions\draw_model.cpp">
+      <Filter>source_engine\hooks\functions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -82,9 +145,6 @@
     <Filter Include="main">
       <UniqueIdentifier>{b6bc8da3-4739-4428-92e4-b17171b2b9db}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main\menu">
-      <UniqueIdentifier>{9999e9cd-d676-46d6-81d6-f6082c2eab55}</UniqueIdentifier>
-    </Filter>
     <Filter Include="other\input">
       <UniqueIdentifier>{8743148d-92fe-4c2f-a5c5-e38e2978fecc}</UniqueIdentifier>
     </Filter>
@@ -93,6 +153,42 @@
     </Filter>
     <Filter Include="source_engine\entities">
       <UniqueIdentifier>{3e6bb642-1da5-46e6-85c2-92b42ac457e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\FGUI">
+      <UniqueIdentifier>{2c954d7d-285e-4c81-9736-b210daa33a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\FGUI\internal">
+      <UniqueIdentifier>{bb9c4ca2-8d0a-401f-bf89-3653d854ac5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\FGUI\dependencies">
+      <UniqueIdentifier>{6d1c91c6-dc29-4f44-a0c8-6e7127d70c06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\FGUI\misc">
+      <UniqueIdentifier>{fe504bf1-2a33-4f1f-9b8e-d5fba830dc4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\FGUI\widgets">
+      <UniqueIdentifier>{f1304883-2743-4c42-983d-45b6091da98a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\FGUI\dependencies\external">
+      <UniqueIdentifier>{8e98b157-13b8-4dcf-a745-ec5876b7acaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\menu">
+      <UniqueIdentifier>{806cf9cd-0b54-43e5-a153-f7fd75775870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\features">
+      <UniqueIdentifier>{f3d7b518-3818-4fe9-88eb-6781d88562ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\features\miscellaneous">
+      <UniqueIdentifier>{d775be2f-c69c-4001-a20e-dd7cb48d1022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\features\playerlist">
+      <UniqueIdentifier>{0d3c6d76-ef05-4197-979b-2850b2b25379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\features\visuals">
+      <UniqueIdentifier>{54f55610-f9eb-4019-834b-d02025c4d604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\events">
+      <UniqueIdentifier>{1d5bf565-2780-4dac-887d-b035bad98500}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -142,15 +238,6 @@
     <ClInclude Include="other\math\vector3d.h">
       <Filter>other\math</Filter>
     </ClInclude>
-    <ClInclude Include="source_engine\interfaces\list\IInterfaceSystem.h">
-      <Filter>source_engine\interfaces\list</Filter>
-    </ClInclude>
-    <ClInclude Include="main\configuration.h">
-      <Filter>main</Filter>
-    </ClInclude>
-    <ClInclude Include="main\menu\menu.h">
-      <Filter>main\menu</Filter>
-    </ClInclude>
     <ClInclude Include="other\input\input.h">
       <Filter>other\input</Filter>
     </ClInclude>
@@ -169,23 +256,137 @@
     <ClInclude Include="source_engine\interfaces\list\IClientEntityList.h">
       <Filter>source_engine\interfaces\list</Filter>
     </ClInclude>
-    <ClInclude Include="source_engine\entities\base_player.h">
+    <ClInclude Include="source_engine\definitions\viewsetup.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\entities\entities.h">
       <Filter>source_engine\entities</Filter>
     </ClInclude>
-    <ClInclude Include="source_engine\entities\base_entity.h">
-      <Filter>source_engine\entities</Filter>
+    <ClInclude Include="main\FGUI\FGUI.h">
+      <Filter>main\FGUI</Filter>
     </ClInclude>
-    <ClInclude Include="source_engine\entities\base_combat_character.h">
-      <Filter>source_engine\entities</Filter>
+    <ClInclude Include="main\FGUI\widgets\button.h">
+      <Filter>main\FGUI\widgets</Filter>
     </ClInclude>
-    <ClInclude Include="source_engine\entities\base_weapon.h">
-      <Filter>source_engine\entities</Filter>
+    <ClInclude Include="main\FGUI\widgets\checkbox.h">
+      <Filter>main\FGUI\widgets</Filter>
     </ClInclude>
-    <ClInclude Include="source_engine\entities\base_animating.h">
-      <Filter>source_engine\entities</Filter>
+    <ClInclude Include="main\FGUI\widgets\colorpicker.h">
+      <Filter>main\FGUI\widgets</Filter>
     </ClInclude>
-    <ClInclude Include="source_engine\entities\base_csplayer.h">
-      <Filter>source_engine\entities</Filter>
+    <ClInclude Include="main\FGUI\widgets\combobox.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\container.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\itemselector.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\keybinder.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\label.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\listbox.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\multibox.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\slider.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\tabpanel.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\textbox.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\widgets\widgets.h">
+      <Filter>main\FGUI\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\misc\builder.h">
+      <Filter>main\FGUI\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\internal\aliases.h">
+      <Filter>main\FGUI\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\internal\definitions.h">
+      <Filter>main\FGUI\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\internal\helpers.h">
+      <Filter>main\FGUI\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="main\FGUI\dependencies\external\json.h">
+      <Filter>main\FGUI\dependencies\external</Filter>
+    </ClInclude>
+    <ClInclude Include="main\menu\menu.h">
+      <Filter>main\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\features.h">
+      <Filter>main\features</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\miscellaneous\miscellaneous.h">
+      <Filter>main\features\miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\playerlist\playerlist.h">
+      <Filter>main\features\playerlist</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IInputSystem.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="other\events\event_manager.h">
+      <Filter>other\events</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IVGameEventManager.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\playerinfo.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\visuals\visuals.h">
+      <Filter>main\features\visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="other\math\matrix3x4.h">
+      <Filter>other\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IDebugOverlay.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\ILocalize.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\cs_weapon_data.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="other\math\math.h">
+      <Filter>other\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\animationlayers.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IVModelInfo.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IMaterialSystem.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\definitions\modelrenderinfo.h">
+      <Filter>source_engine\defintions</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IStudioRender.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="other\utilities\tier1_utl.h">
+      <Filter>other\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IEngineSounds.h">
+      <Filter>source_engine\interfaces\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source_engine\interfaces\list\IViewRenderBeams.h">
+      <Filter>source_engine\interfaces\list</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

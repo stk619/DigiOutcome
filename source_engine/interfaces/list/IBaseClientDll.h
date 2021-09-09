@@ -13,7 +13,7 @@ public:
 	char* szNetworkedName;
 	receivedtable_t* ptrReceivedTable;
 	clientclass_t* ptrNext;
-	int iClassID;
+	eClassId iClassID;
 };
 
 struct IBaseClientDll

@@ -2,7 +2,6 @@
 
 //bunch of things deleted that aren't used, as well as a bunch of types we don't need changed to void*
 
-//declarations, because visual studio is sometimes annoying to manage ;|
 struct receivedprop_t;
 struct receivedtable_t;
 
